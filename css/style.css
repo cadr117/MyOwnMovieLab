@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page {
+  background-color: #1a191f;
+  /* background-image: url(/img/Mask\ group.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+
+.container {
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+}
+
+/* header */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.header__search {
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.logo {
+  font-size: 64px;
+  color: #ffffff;
+}
+
+/* main */
+
+.main__container {
+  padding-top: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.form__input {
+  padding: 25px;
+  border-radius: 5px;
+  outline: none;
+  max-width: 500px;
+}
+
+
+.form__btn {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}

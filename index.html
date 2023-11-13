@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Own Movie Lab</title>
+				<link rel="stylesheet" href="css/normalize.css">
+				<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body class="page">
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="logo">My Movies</a>
+      <form>
+        <input type="search" class="header__search" placeholder="Поиск...">
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main__container">
+      <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form">
+        <input class="form__input" type="text" name="name" required placeholder="Название фильмв">
+        <input class="form__input" type="text" name="description" required placeholder="Описание фильма">
+        <input class="form__input" type="number" name="ratio" required placeholder="Рейтинг" min="0" max="10">
+        <button type="submit" class="form__btn btn">Внести</button>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
