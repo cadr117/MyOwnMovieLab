@@ -37,14 +37,24 @@ window.addEventListener('DOMContentLoaded', () => {
   // });
 
   let addName = document.querySelector('.movie__name'),
-      addBtn = document.querySelector('.form__btn');
+      addBtn = document.querySelector('.form__btn'),
+      parentDiv = document.querySelector('.movie__list');
 
   const movieList = [];
 
   addBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    let div = document.createElement('div');
+    div.innerHTML = `
+    ${addName.value}
+    `
+    div.style.color = '#ffffff';
 
+    movieList.push(div);
+    movieList.forEach((item) => {
+      parentDiv.append(item);
+    });
 
     console.log(addName.value);
   });
