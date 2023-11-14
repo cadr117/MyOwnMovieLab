@@ -18,13 +18,13 @@
   </header>
   <main class="main">
     <div class="container main__container">
-      <form class="form">
-        <input class="form__input movie__name" type="text" name="name" required placeholder="Название фильма" autocomplete="off">
-        <input class="form__input movie__descr" type="text" name="description" required placeholder="Описание фильма">
-        <!-- <input class="form__input movie__rating" type="number" name="rating" required placeholder="Рейтинг" min="0" max="10"> -->
-        <button type="submit" class="form__btn btn">Внести</button>
+      <div class="form">
+        <input class="form__input movie__name" type="text" required placeholder="Название фильма" autocomplete="off">
+        <input class="form__input movie__descr" type="text" required placeholder="Описание фильма">
+        <input class="form__input movie__rating" type="number" required placeholder="Рейтинг" min="0" max="10">
+        <button class="form__btn btn">Внести</button>
         <div class="movie__list"></div>
-      </form>
+    </div>
     </div>
   </main>
   <script src="script.js"></script>
