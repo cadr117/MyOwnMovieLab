@@ -1,6 +1,7 @@
 'use strict'
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Список фильмов
 
   let addName = document.querySelector('.movie__name'),
     addBtn = document.querySelector('.form__btn'),
@@ -16,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(addName.value) {
+    if (addName.value) {
       let newFilm = {
         name: addName.value
       };
@@ -32,12 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-
   function displayMovieList() {
     let displayFilm = '';
     movieList.forEach((film) => {
       displayFilm += `
-      <div>${film.name} <button class = 'delete'>x</button></div>
+      <div class = 'logo filmCard'>${film.name} <button class = 'delete'>x</button></div>
       `;
     });
 
@@ -54,4 +54,35 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  // Поиск
+
+  const filmCard = document.querySelectorAll('.filmCard'),
+    searchText = document.querySelector('.header__search'),
+    searchBtn = document.querySelector('.header__btn');
+
+  console.log(filmCard);
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (searchText.value) {
+      filmCard.forEach((film) => {
+        // we can also use her RegExp: film.textContent.replace(/ x/g, '') !== searchText.value.trim()
+        if (film.textContent.search(searchText.value)) {
+          film.classList.add('hide');
+        }
+      });
+
+      searchText.value = '';
+    } else {
+      filmCard.forEach((film) => {
+        film.classList.remove('hide');
+      });
+      displayMovieList();
+      console.log(filmCard);
+    }
+
+  });
+
 });
+
+//
